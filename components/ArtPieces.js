@@ -14,9 +14,3 @@ export default function ArtPieces({ pieces }) {
   );
 }
 
-
-/*
-<h2>{artPiece.name}</h2>
-            <span>{artPiece.artist}</span>
-            <img src={artPiece.imageSource} alt={artPiece.name}></img>
-*/
