@@ -1,20 +1,33 @@
-import Spotlight from "../components/Spotlight/Spotlight";
+import Spotlight from "../components/Spotlight";
 import useSWR from "swr";
+import Link from "next/link";
 
 export default function spotlight() {
-    function getRandomElement(array) {
-        return array[Math.floor(Math.random() * array.length)];
-    }
-    const { data, error, isLoading } = useSWR("https://example-apis.vercel.app/api/art");
+  function getRandomElement(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
 
-    if (error) return <div>failed to load</div>;
-    if (isLoading) return <div>loading...</div>;
+  const { data, error, isLoading } = useSWR(
+    "https://example-apis.vercel.app/api/art"
+  );
 
-    const randomPiece = getRandomElement(data);
+  if (error) return <div>failed to load</div>;
+  if (isLoading) return <div>loading...</div>;
 
-    console.log(randomPiece);
+  const randomPiece = getRandomElement(data);
 
-    return (
-        <Spotlight image={randomPiece.imageSource} title={randomPiece.name} artist={randomPiece.artist} />
-    );
+  console.log(randomPiece);
+
+  return (
+    <>
+      <Link href="/">Go Back To Homepage</Link>
+      <br />
+      <Link href="/list">Switch To List</Link>
+      <Spotlight
+        image={randomPiece.imageSource}
+        title={randomPiece.name}
+        artist={randomPiece.artist}
+      />
+    </>
+  );
 }

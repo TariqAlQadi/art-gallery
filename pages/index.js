@@ -2,13 +2,16 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <ul>
-      <li>
-        <Link href="/list">List View</Link>
-      </li>
-      <li>
-        <Link href="/spotlight">Spotlight</Link>
-      </li>
-    </ul>
+    <>
+      <h1>The Art Gallery</h1>
+      <ul>
+        <li>
+          <Link href="/list">List View</Link>
+        </li>
+        <li>
+          <Link href="/spotlight">Spotlight</Link>
+        </li>
+      </ul>
+    </>
   );
 }

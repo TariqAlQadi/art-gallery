@@ -1,4 +1,4 @@
-import ArtPieces from "../components/Artpieces/ArtPieces";
+import ArtPieces from "../components/ArtPieces";
 import useSWR from "swr";
 import Link from "next/link";
 
@@ -12,6 +12,7 @@ export default function List() {
   return (
     <>
       <Link href="/">Go Back To Homepage</Link>
+      <br />
       <Link href="/spotlight">Switch To Spotlight</Link>
       <ArtPieces pieces={data} />
     </>
