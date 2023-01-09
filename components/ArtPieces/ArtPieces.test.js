@@ -1,4 +1,4 @@
-import ArtPieces from "./ArtPieces";
+import ArtPieces from ".";
 import { render, screen } from "@testing-library/react";
 
 const testPieces = [{ title: "name", artist: "Artist" }];
