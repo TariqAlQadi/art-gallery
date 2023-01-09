@@ -15,6 +15,7 @@ export default function List() {
       <br />
       <Link href="/spotlight">Switch To Spotlight</Link>
       <ArtPieces pieces={data} />
-    </>
+      
+    </> 
   );
 }
