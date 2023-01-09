@@ -1,5 +1,6 @@
 import ArtPieces from "../components/Artpieces/ArtPieces";
 import useSWR from "swr";
+import Link from "next/link";
 
 export default function List() {
   const { data, error, isLoading } = useSWR(
@@ -10,6 +11,8 @@ export default function List() {
   if (isLoading) return <div>loading...</div>;
   return (
     <>
+      <Link href="/">Go Back To Homepage</Link>
+      <Link href="/spotlight">Switch To Spotlight</Link>
       <ArtPieces pieces={data} />
     </>
   );
