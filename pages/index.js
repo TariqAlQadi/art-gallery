@@ -1,4 +1,6 @@
 import useSWR from "swr";
+import Image from "next/image";
+import ArtPieces from "../components/Artpieces";
 
 export default function HomePage() {
   const { data, error, isLoading } = useSWR(
@@ -9,10 +11,8 @@ export default function HomePage() {
   if (isLoading) return <div>loading...</div>;
 
   return (
-    <ul>
-      {data.map((artPiece) => {
-        return <li key={artPiece.slug}>{artPiece.artist}</li>;
-      })}
-    </ul>
+    <>
+      <ArtPieces pieces={data} />
+    </>
   );
 }
