@@ -1,6 +1,5 @@
 import useSWR from "swr";
-import Image from "next/image";
-import ArtPieces from "../components/Artpieces";
+import ArtPieces from "../components/Artpieces/ArtPieces";
 
 export default function HomePage() {
   const { data, error, isLoading } = useSWR(
