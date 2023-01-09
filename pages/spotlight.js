@@ -1,7 +1,7 @@
+import Spotlight from "../components/Spotlight/Spotlight";
 import useSWR from "swr";
-import ArtPiecePreview from "../components/ArtPiecePreview/ArtPiecePreview";
 
-export default function Spotlight() {
+export default function spotlight() {
     function getRandomElement(array) {
         return array[Math.floor(Math.random() * array.length)];
     }
@@ -15,6 +15,6 @@ export default function Spotlight() {
     console.log(randomPiece);
 
     return (
-        <ArtPiecePreview image={randomPiece.imageSource} title={randomPiece.name} artist={randomPiece.artist} />
+        <Spotlight image={randomPiece.imageSource} title={randomPiece.name} artist={randomPiece.artist} />
     );
 }
