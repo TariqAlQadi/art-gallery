@@ -11,7 +11,7 @@ export default function ArtPieces({ pieces }) {
       {pieces.map((artPiece) => {
         return (
           <li key={artPiece.slug}>
-            <Link href={`/art-pieces/${slug}`}>
+            <Link href={`/art-pieces/${artPiece.slug}`}>
               <ArtPiecePreview
                 image={artPiece.imageSource}
                 title={artPiece.name}
