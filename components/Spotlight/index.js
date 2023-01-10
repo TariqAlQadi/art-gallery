@@ -1,4 +1,5 @@
 import Image from "next/image";
+import FavouriteButton from "../FavouriteButton";
 
 export default function Spotlight({ piece }) {
   return (
@@ -10,6 +11,7 @@ export default function Spotlight({ piece }) {
         height={piece.dimensions.height / 3}
         alt={piece.name}
       />
+      <FavouriteButton isFavorite onToggleFavorite />
     </section>
   );
 }

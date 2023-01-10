@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import FavouriteButton from "../FavouriteButton";
 
 export default function ArtPiecePreview({
   title,
@@ -21,6 +22,7 @@ export default function ArtPiecePreview({
           width={width / 5}
         />
       </Link>
+      <FavouriteButton isFavorite onToggleFavorite />
     </li>
   );
 }

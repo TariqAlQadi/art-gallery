@@ -1,11 +1,6 @@
 import ArtPiecePreview from "../ArtPiecePreview";
-import { useRouter } from "next/router";
-import Link from "next/link";
 
 export default function ArtPieces({ pieces }) {
-  const router = useRouter();
-  const { slug } = router.query;
-
   return (
     <section>
       <ul>

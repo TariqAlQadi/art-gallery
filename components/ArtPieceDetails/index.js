@@ -1,4 +1,5 @@
 import Image from "next/image";
+import FavouriteButton from "../FavouriteButton";
 
 export default function ArtPieceDetails({
   imageSource,
@@ -21,6 +22,7 @@ export default function ArtPieceDetails({
       <p>{artist}</p>
       <p>{genre}</p>
       <p>{year}</p>
+      <FavouriteButton isFavorite onToggleFavorite />
     </section>
   );
 }
