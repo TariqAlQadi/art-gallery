@@ -7,20 +7,22 @@ export default function ArtPieces({ pieces }) {
   const { slug } = router.query;
 
   return (
-    <ul>
-      {pieces.map((artPiece) => {
-        return (
-          <li key={artPiece.slug}>
-            <Link href={`/art-pieces/${artPiece.slug}`}>
-              <ArtPiecePreview
-                image={artPiece.imageSource}
-                title={artPiece.name}
-                artist={artPiece.artist}
-              />
-            </Link>
-          </li>
-        );
-      })}
-    </ul>
+    <section>
+      <ul>
+        {pieces.map((piece) => {
+          return (
+            <ArtPiecePreview
+              key={piece.slug}
+              title={piece.name}
+              artist={piece.artist}
+              imageSource={piece.imageSource}
+              width={piece.dimensions.width}
+              height={piece.dimensions.height}
+              slug={piece.slug}
+            />
+          );
+        })}
+      </ul>
+    </section>
   );
 }

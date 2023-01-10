@@ -1,11 +1,26 @@
-export default function ArtPieceDetails({ image, title, artist, year, genre }) {
+import Image from "next/image";
+
+export default function ArtPieceDetails({
+  imageSource,
+  title,
+  artist,
+  year,
+  genre,
+  width,
+  height,
+}) {
   return (
-    <ul>
-      <li>{image}</li>
-      <li>{title}</li>
-      <li>{artist}</li>
-      <li>{year}</li>
-      <li>{genre}</li>
-    </ul>
+    <section>
+      <Image
+        src={imageSource}
+        width={width}
+        height={height}
+        alt={title}
+      ></Image>
+      <h2>{title}</h2>
+      <p>{artist}</p>
+      <p>{genre}</p>
+      <p>{year}</p>
+    </section>
   );
 }

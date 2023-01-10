@@ -70,16 +70,16 @@ First create a new Next.js app based on our template: https://github.com/NikRoe/
 
 #### Acceptance Criteria
 
-- [x] One art piece is picked at random to show as a spotlight piece
-- [x] The art piece image is displayed 🖼️
-- [x] The art piece artist is displayed 🖼️
+- [ ] One art piece is picked at random to show as a spotlight piece
+- [ ] The art piece image is displayed 🖼️
+- [ ] The art piece artist is displayed 🖼️
 
 #### Tasks
 
 - [x] Write function to pick one art piece [at random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#examples)
 - [x] Create the component `Spotlight`
 - [x] `Spotlight` props: `image`, `artist`
-- [x] All acceptance criteria marked with 🖼️ are covered by component testing
+- [ ] All acceptance criteria marked with 🖼️ are covered by component testing
 
 ---
 
@@ -103,12 +103,12 @@ First create a new Next.js app based on our template: https://github.com/NikRoe/
 #### Tasks
 
 - [x] Move the data fetching logic to `pages/_app.js`
-- [ ] Find a solution for global state handling to have the art pieces available on all pages
-- [ ] Adapt the page `pages/index.js`: rename the function to `SpotlightPage` and have it render only the `Spotlight` component
-- [ ] Create the page `pages/art-pieces/index.js` that renders the `ArtPieces` component
-- [ ] Create the component `Navigation` that renders all navigation links
-- [ ] Create the component `Layout` that renders the `Navigation` component ([see this as reference](https://nextjs.org/docs/basic-features/layouts))
-- [ ] Apply the `Layout` component in `pages/_app.js`
+- [x] Find a solution for global state handling to have the art pieces available on all pages
+- [x] Adapt the page `pages/index.js`: rename the function to `SpotlightPage` and have it render only the `Spotlight` component
+- [x] Create the page `pages/art-pieces/index.js` that renders the `ArtPieces` component
+- [x] Create the component `Navigation` that renders all navigation links
+- [x] Create the component `Layout` that renders the `Navigation` component ([see this as reference](https://nextjs.org/docs/basic-features/layouts))
+- [x] Apply the `Layout` component in `pages/_app.js`
 - [ ] All acceptance criteria marked with 🖼️ are covered by component testing
 
 ---
@@ -136,11 +136,11 @@ First create a new Next.js app based on our template: https://github.com/NikRoe/
 
 #### Tasks
 
-- [ ] Create the component `ArtPieceDetails`
-- [ ] `ArtPieceDetails` props: `image`, `title`, `artist`, `year`, `genre`
-- [ ] Create the page `pages/art-pieces/[slug]/index.js` that renders `ArtPieceDetails`
-- [ ] Read the query parameter `slug` from `next/router`
-- [ ] Use the `slug` to find the art piece to display
+- [x] Create the component `ArtPieceDetails`
+- [x] `ArtPieceDetails` props: `image`, `title`, `artist`, `year`, `genre`
+- [x] Create the page `pages/art-pieces/[slug]/index.js` that renders `ArtPieceDetails`
+- [x] Read the query parameter `slug` from `next/router`
+- [x] Use the `slug` to find the art piece to display
 - [ ] All acceptance criteria marked with 🖼️ are covered by component testing
 
 ---
